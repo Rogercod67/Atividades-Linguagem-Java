@@ -1,0 +1,28 @@
+package Exercicios;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+
+public class Exerc05 {
+	public static void main(String [] args) {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Digite o codigo das pecas: ");
+		int codigoPeca1 = sc.nextInt();
+		int codigoPeca2 = sc.nextInt();
+		System.out.println("Digite o numero de pecas: ");
+		int numeroPeca1 = sc.nextInt();
+		int numeroPeca2 = sc.nextInt();
+		System.out.println("Digite o valor das pecas: ");
+		double valorPeca1 = sc.nextDouble();
+		double valorPeca2 = sc.nextDouble();
+		
+		double valorApagar = ((numeroPeca1 * valorPeca1) + (numeroPeca2 * valorPeca2));
+		
+		System.out.printf("O valor a ser pago é: %.2f%n", valorApagar);
+
+		sc.close();
+	}
+}
