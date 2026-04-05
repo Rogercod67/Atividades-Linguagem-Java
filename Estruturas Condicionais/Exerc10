@@ -1,0 +1,31 @@
+package Exercicios;
+
+import java.util.Scanner;
+
+public class Exerc10 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Digite a hora inicial do jogo: ");
+		int horaInicio = sc.nextInt();
+		
+		System.out.println("Digite a hora final do jogo: ");
+		int horaFim = sc.nextInt();
+		
+		int horaDeJogo = 0;
+		if(horaFim == 0 && horaInicio == 0) {
+			System.out.println("Você jogou: 24 horas!");
+		}
+		else if(horaInicio != 0 ) {
+			horaDeJogo = horaFim - horaInicio;
+			System.out.println("Você jogou por: " + horaDeJogo + " horas!");
+		}
+		else {
+			System.out.println("Digite um horário válido: ");
+		}
+		sc.close();
+
+	}
+
+}
