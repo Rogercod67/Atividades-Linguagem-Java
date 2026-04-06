@@ -1,0 +1,32 @@
+package Exercicios;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Exerc12 {
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		double valor_qualquer = sc.nextDouble();
+		
+		if (valor_qualquer >= 0 && valor_qualquer <= 25) {
+			System.out.println("Intervalo: (0,25)");
+		}
+		else if (valor_qualquer >= 25 && valor_qualquer <= 50) {
+			System.out.println("Intervalo: (25,50)");
+		}
+		else if (valor_qualquer >= 50 && valor_qualquer <= 75) {
+			System.out.println("Intervalo: (50,75)");
+		}
+		else if (valor_qualquer >= 75 && valor_qualquer <= 100) {
+			System.out.println("Intervalo: (75,100)");
+		}
+		else {
+			System.out.println("Fora de intervalo");
+		}
+		
+		
+		sc.close();
+	}
+}
