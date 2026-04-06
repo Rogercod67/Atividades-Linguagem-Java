@@ -14,18 +14,20 @@ public class Exerc10 {
 		int horaFim = sc.nextInt();
 		
 		int horaDeJogo = 0;
-		if(horaFim == 0 && horaInicio == 0) {
-			System.out.println("Você jogou: 24 horas!");
-		}
-		else if(horaInicio != 0 ) {
+		if(horaInicio<horaFim) {
 			horaDeJogo = horaFim - horaInicio;
-			System.out.println("Você jogou por: " + horaDeJogo + " horas!");
+			System.out.println("O jogo durou: " + horaDeJogo + " horas!");
+		}
+		else if(horaInicio>horaFim){
+			horaDeJogo = (24 - horaInicio) + (0 + horaFim);
+			System.out.println("O jogo durou: " + horaDeJogo + " horas!");
+		}
+		else if(horaInicio == 0 && horaFim == 0) {
+			System.out.println("O jogo durou: 24 horas!");
 		}
 		else {
-			System.out.println("Digite um horário válido: ");
+			System.out.println("Digite um horário válido!");
 		}
-		sc.close();
-
+		
 	}
-
 }
