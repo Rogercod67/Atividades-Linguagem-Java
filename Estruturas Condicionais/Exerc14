@@ -1,0 +1,40 @@
+package Exercicios;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Exerc14 {
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		double salary = sc.nextDouble();
+		
+		if (salary <= 2000.00) {
+			System.out.println("Isento");
+		}
+		else if (salary > 2000.00 && salary <= 3000.00) {
+			double faixa1 = salary - 2000.00;
+			double totalApagar1 = faixa1 * 0.08;
+			System.out.printf("Total a pagar: %.2f", totalApagar1);
+		}
+		else if (salary > 3000.00 && salary <= 4500.00) {
+			double faixa1 = 3000.00 - 2000.00;
+			double totalApagar1 = faixa1 * 0.08;
+			double faixa2 = salary - 3000.00;
+			double totalApagar2 = (faixa2 * 0.18) + totalApagar1;
+			System.out.printf("Total a pagar: %.2f", totalApagar2);
+		}
+		else if (salary > 4500.00) {
+			double faixa1 = 3000.00 - 2000.00;
+			double totalApagar1 = faixa1 * 0.08;
+			double faixa2 = 4500.00 - 3000.00;
+			double totalApagar2 = (faixa2 * 0.18) + totalApagar1;
+			double faixa3 = salary - 4500.00;
+			double totalApagar3 = (faixa3 * 0.28) + totalApagar2;
+			
+			System.out.printf("Total a pagar: %.2f", totalApagar3);
+		}
+		sc.close();
+	}
+}
