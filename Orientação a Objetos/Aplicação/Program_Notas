@@ -1,0 +1,27 @@
+package Aplication;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import Entidade.Alunos;
+
+public class Program_Notas {
+	public static void main(String [] args) {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		Alunos alunos = new Alunos();
+		System.out.print("Digite o nome do aluno: ");
+		alunos.name = sc.nextLine();
+		System.out.println();
+		System.out.println("Digite as três notas dos trimestres: ");
+		alunos.nota1 = sc.nextDouble();
+		alunos.nota2 = sc.nextDouble();
+		alunos.nota3 = sc.nextDouble();
+		System.out.println();
+		System.out.println(alunos);
+		sc.close();
+	}
+}
+
+
