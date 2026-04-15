@@ -1,0 +1,26 @@
+package Aplication;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Program_Negativo {
+	public static void main(String [] args) {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Quantos números você vai digitar? ");
+		int n = sc.nextInt();
+		int nega[] = new int[n];
+		System.out.println("digite-os:");
+		for(int i = 0; i < nega.length; i++) {
+			nega[i] = sc.nextInt();
+		}
+		System.out.println("números negativos: ");
+		for(int i = 0; i < nega.length; i++) {
+			if(nega[i] < 0) {
+				System.out.printf("%d%n", nega[i]);
+			}
+		}
+		
+		sc.close();
+	}
+}
