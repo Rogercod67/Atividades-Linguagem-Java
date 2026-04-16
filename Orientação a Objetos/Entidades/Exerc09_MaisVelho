@@ -1,0 +1,20 @@
+package Entidade;
+
+public class MaisVelho {
+	private String name;
+	private int yearsOld;
+	
+	public MaisVelho(String name, int yearsOld) {
+		this.name = name;
+		this.yearsOld = yearsOld;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public int getYearsOld() {
+		return yearsOld;
+	}
+	
+}
