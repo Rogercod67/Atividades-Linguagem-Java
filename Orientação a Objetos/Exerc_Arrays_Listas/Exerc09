@@ -1,0 +1,37 @@
+package ArreysExerc;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import Entidade.MaisVelho;
+
+public class Exerc09 {
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Quantas pessoas voce vai digitar?");
+		int n = sc.nextInt();
+		sc.nextLine();
+		MaisVelho[] vect = new MaisVelho[n];
+		
+		for(int i = 0; i < vect.length; i++) {
+			System.out.println("Digite os dados da " +(i + 1) + "a pessoa: ");
+			System.out.print("Nome: ");
+			String name = sc.nextLine();
+			System.out.print("Idade: ");
+			int yearsOld = sc.nextInt();
+			sc.nextLine();
+			vect[i] = new MaisVelho(name, yearsOld); 
+		}
+		int velho = vect[0].getYearsOld();
+		String velhoName = vect[0].getName();
+		for(int i = 1; i < vect.length; i++) {
+			if(vect[i].getYearsOld() > velho) {
+				velho = vect[i].getYearsOld();
+				velhoName = vect[i].getName();
+			}
+		}
+		System.out.println("Pesoa mais velha: " + velhoName);
+		sc.close();
+	}
+}
